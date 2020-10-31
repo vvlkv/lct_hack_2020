@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:lct/Components/HexColor.dart';
 import 'package:lct/Components/IBIProgressHUD.dart';
 import 'package:lct/Components/IBIRaisedButton.dart';
+import 'package:lct/Core/HttpClient.dart';
 
 class OnWorkRoute extends StatelessWidget {
 
@@ -45,6 +46,22 @@ class OnWork extends StatefulWidget {
 
 class OnWorkState extends State<OnWork> {
 
+  bool isLoading = false;
+
+  HttpClient client = HttpClient();
+
+  void sendSos() {
+    setState(() {
+      isLoading = true;
+    });
+    client.sendSos().then((value) {
+      setState(() {
+        isLoading = false;
+      });
+      Scaffold.of(context).showSnackBar(SnackBar(content: Text("Помощь скоро будет!")));
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return IBIProgressHUD(Container(
@@ -54,7 +71,7 @@ class OnWorkState extends State<OnWork> {
               child: FlatButton(
                   child: Image.asset('graphics/sos.png'),
                   onPressed: () {
-                    // load();
+                    sendSos();
                   })
           ),
           Positioned(
@@ -77,6 +94,6 @@ class OnWorkState extends State<OnWork> {
           ),
         ],
       ),
-    ), false);
+    ), isLoading);
   }
 }

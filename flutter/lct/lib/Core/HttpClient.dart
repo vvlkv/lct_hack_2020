@@ -40,6 +40,10 @@ class HttpClient {
       String owner) async {
     return mockCall();
   }
+
+  Future sendSos() {
+    return mockCall();
+  }
 }
 
 class Object {
