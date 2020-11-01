@@ -54,9 +54,11 @@ class OnBuildingState extends State<OnBuilding> {
         context,
         MaterialPageRoute(builder: (context) => ObjectsRoute())
     );
-    setState(() {
-      selectedAddress = result as String;
-    });
+    if (result != null) {
+      setState(() {
+        selectedAddress = result as String;
+      });
+    }
   }
 
   @override

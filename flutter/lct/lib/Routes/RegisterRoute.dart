@@ -14,7 +14,7 @@ class RegisterRouter extends StatelessWidget {
         title: Text("Регистрация"),
         backgroundColor: HexColor.fromHex('A8012D'),
       ),
-      resizeToAvoidBottomInset: false,
+      resizeToAvoidBottomInset: true,
       backgroundColor: HexColor.fromHex('EFF2F9'),
       body: Register(),
     );

@@ -34,7 +34,7 @@ class ObjectsState extends State<Objects> {
 
   Widget loaderWidget() {
     return Center(
-      child: CircularProgressIndicator(),
+      child: CircularProgressIndicator(valueColor: AlwaysStoppedAnimation<Color>(HexColor.fromHex('A8012D'))),
     );
   }
 

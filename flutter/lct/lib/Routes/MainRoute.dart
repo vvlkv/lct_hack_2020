@@ -48,13 +48,16 @@ class _MainPageState extends State<MainPage> {
       Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => OnBuildingRoute()));
-    }).catchError((error) => {});
+    });
   }
 
-  void register() {
-    Navigator.push(
+  void register(BuildContext context) async {
+    final result = await Navigator.push(
         context,
         MaterialPageRoute(builder: (context) => RegisterRouter()));
+    Scaffold.of(context)
+      ..removeCurrentSnackBar()
+      ..showSnackBar(SnackBar(content: Text("Вы успешно зарегистрировались!")));
   }
 
   @override
@@ -70,17 +73,6 @@ class _MainPageState extends State<MainPage> {
         resizeToAvoidBottomInset: false,
         body: IBIProgressHUD(Container(
           child: Stack(children: [
-          //   Positioned(
-          //     child: new Align(
-          //       alignment: FractionalOffset.topCenter,
-          //       child: Padding(
-          //         padding: EdgeInsets.all(128),
-          //         child: Image(
-          //             image: AssetImage('graphics/department.jpg')
-          //         ),
-          //       )
-          //     )
-          // ),
           Padding(
             padding: EdgeInsets.all(16),
             child: Column(
@@ -154,7 +146,7 @@ class _MainPageState extends State<MainPage> {
                         }, HexColor.fromHex('A8002C')),
                         SizedBox(height: 16),
                         IBIButton('Зарегистрироваться', () {
-                          register();
+                          register(context);
                         }, Colors.black),
                       ],
                     )
