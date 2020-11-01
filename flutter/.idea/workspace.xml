@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9fc79069-b755-4ed0-9887-0f6fbff6c0c5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lct/lib/Routes/MainRoute.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lct/lib/Routes/MainRoute.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lct/lib/Routes/ObjectsRoute.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lct/lib/Routes/ObjectsRoute.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lct/lib/Routes/OnBuildingRoute.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lct/lib/Routes/OnBuildingRoute.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lct/lib/Routes/RegisterRoute.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lct/lib/Routes/RegisterRoute.dart" afterDir="false" />
-    </list>
+    <list default="true" id="9fc79069-b755-4ed0-9887-0f6fbff6c0c5" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
