@@ -8,3 +8,6 @@
 
 # Директория lct_api
 Backend
+
+# Директория monitorings
+Backend
